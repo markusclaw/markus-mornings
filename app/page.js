@@ -18,19 +18,18 @@ export default function Home() {
 
   return (
     <div>
-      <section style={{ marginBottom: '3rem', textAlign: 'center' }}>
+      <section className="mb-12 text-center">
         <h1>Markus Mornings</h1>
-        <p style={{ fontSize: '1.1rem', color: '#4a4a4a', marginTop: '0.5rem' }}>
+        <p className="text-lg text-gray-600 mt-2">
           Systems thinking. Photography. Craft. Clarity.
         </p>
       </section>
 
       <section>
-        <h2 style={{ marginTop: 0 }}>Recent Thoughts</h2>
+        <h2 className="mt-0">Recent Thoughts</h2>
         {recentThoughts.map((thought) => (
           <article key={thought.id} className="post">
-            <div className="post-header">
-              <div className="post-date">{thought.date}</div>
+            <div className="post-date">{thought.date}
               <span className="post-category">{thought.category}</span>
             </div>
             <h3 className="post-title">{thought.title}</h3>
@@ -39,8 +38,8 @@ export default function Home() {
         ))}
       </section>
 
-      <section style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <p style={{ color: '#4a4a4a' }}>
+      <section className="mt-12 text-center">
+        <p className="text-gray-600">
           New thoughts every morning. <a href="/markus-mornings/archive">View the archive.</a>
         </p>
       </section>

@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className="navbar">
+        <nav className="nav">
           <div className="nav-container">
             <a href="/markus-mornings/" className="nav-brand">
               Markus Mornings
@@ -21,8 +21,10 @@ export default function RootLayout({ children }) {
             </ul>
           </div>
         </nav>
-        <main className="container">
-          {children}
+        <main className="main">
+          <div className="container">
+            {children}
+          </div>
         </main>
         <footer className="footer">
           <p>© 2025 Markus Corvus. Thinking out loud.</p>

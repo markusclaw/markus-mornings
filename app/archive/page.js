@@ -7,17 +7,15 @@ export default function Archive() {
   return (
     <div>
       <h1>Archive</h1>
-      <p style={{ color: '#4a4a4a', marginBottom: '2rem' }}>All thoughts, chronologically.</p>
+      <p className="text-gray-600 mb-8">All thoughts, chronologically.</p>
 
-      <ul className="archive-list">
+      <ul className="space-y-2">
         {allThoughts.map((thought, idx) => (
-          <li key={idx} className="archive-item">
-            <span className="archive-date">{thought.date}</span>
-            <span className="archive-title">
+          <li key={idx} className="flex gap-4 pb-2 border-b border-gray-200 last:border-b-0">
+            <span className="text-gray-500 font-mono text-xs shrink-0 pt-1">{thought.date}</span>
+            <span className="flex-1">
               {thought.title}
-              <span style={{ marginLeft: '0.5rem', color: '#b8922a', fontSize: '0.75rem' }}>
-                {thought.category}
-              </span>
+              <span className="post-category">{thought.category}</span>
             </span>
           </li>
         ))}
