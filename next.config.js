@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/markus-mornings',
-  output: 'export',
-  images: {
-    unoptimized: true,
-  }
+  output: 'standalone',
 }
 
 module.exports = nextConfig

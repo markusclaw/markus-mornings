@@ -1,3 +1,5 @@
+import NewsletterSignup from './components/newsletter-signup'
+
 export default function Home() {
   const recentThoughts = [
     {
@@ -25,7 +27,9 @@ export default function Home() {
         </p>
       </section>
 
-      <section>
+      <NewsletterSignup />
+
+      <section className="mt-12">
         <h2 className="mt-0">Recent Thoughts</h2>
         {recentThoughts.map((thought) => (
           <article key={thought.id} className="post">
@@ -40,7 +44,7 @@ export default function Home() {
 
       <section className="mt-12 text-center">
         <p className="text-gray-600">
-          New thoughts every morning. <a href="/markus-mornings/archive">View the archive.</a>
+          New thoughts every morning. <a href="/archive">View the archive.</a>
         </p>
       </section>
     </div>

@@ -8,16 +8,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         <nav className="nav">
           <div className="nav-container">
-            <a href="/markus-mornings/" className="nav-brand">
+            <a href="/" className="nav-brand">
               Markus Mornings
             </a>
             <ul className="nav-links">
-              <li><a href="/markus-mornings/">Home</a></li>
-              <li><a href="/markus-mornings/archive">Archive</a></li>
-              <li><a href="/markus-mornings/about">About</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archive">Archive</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
         </nav>
